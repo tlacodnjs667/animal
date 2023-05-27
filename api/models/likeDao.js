@@ -21,9 +21,10 @@ const createLike = (user_serial, spotId) => {
     `);
 };
 
-const deleteLike = (user_serial, spotId) => {
+const deleteLike = (id) => {
 	return serviceDataSource.query(`
-    
+        DELETE FROM spot_likes 
+        WHERE id = ${id}
     `);
 };
 
